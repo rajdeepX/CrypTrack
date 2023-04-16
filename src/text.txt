@@ -1,0 +1,5 @@
+BEST PRACTICES
+
+// Put all the pages in the pages folder
+// Put all the business logic (apis) in the api folder
+Put all the components in components wise folder according to parent child components
