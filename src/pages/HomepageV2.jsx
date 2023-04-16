@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import millify from "millify";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import Stats from "./Stats";
+import Stats from "../components/Stats";
 
 const HomepageV2 = () => {
   // const url = "https://coinranking1.p.rapidapi.com/coins";
