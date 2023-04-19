@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import HistoryChart from "./HistoryChart";
+import Demo from "./Demo";
 
 function CoinDetail() {
   const [coin, setCoin] = useState(null);
@@ -8,7 +10,7 @@ function CoinDetail() {
 
   const options = {
     method: "GET",
-    url: "https://coinranking1.p.rapidapi.com/coin/razxDUgYGNAdQ",
+    url: "https://coinranking1.p.rapidapi.com/coin/",
     headers: {
       "X-RapidAPI-Key": "409003033amsh95405c2429d64dbp15eb58jsn62fe93b86a91",
       "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
@@ -36,10 +38,15 @@ function CoinDetail() {
 
   return (
     <div>
-      <h2>{coin.name}</h2>
-      <p>{coin.symbol}</p>
-      <img style={{ width: "50px" }} src={coin.iconUrl} alt={coin.name} />
-      <p>{coin.description}</p>
+      <div className="coin-details">
+        <h2>{coin.name}</h2>
+        <p>{coin.symbol}</p>
+        <img style={{ width: "50px" }} src={coin.iconUrl} alt={coin.name} />
+        <p>{coin.description}</p>
+      </div>
+      <div className="coin-chart">
+        <HistoryChart name={coin.name} />
+      </div>
     </div>
   );
 }

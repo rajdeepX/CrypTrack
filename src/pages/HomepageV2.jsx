@@ -43,10 +43,10 @@ const HomepageV2 = () => {
         "https://coinranking1.p.rapidapi.com/coins",
         options
       );
-      console.log(response);
+      // console.log(response);
       const allCoins = response.data.data.coins;
 
-      console.log(allCoins);
+      // console.log(allCoins);
 
       const coinStats = response.data.data.stats;
 
