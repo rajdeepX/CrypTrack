@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import HistoryChart from "./HistoryChart";
-import Demo from "./Demo";
 
 function CoinDetail() {
   const [coin, setCoin] = useState(null);
@@ -37,7 +36,7 @@ function CoinDetail() {
   }
 
   return (
-    <div>
+    <div className="coin-detail-container">
       <div className="coin-details">
         <h2>{coin.name}</h2>
         <p>{coin.symbol}</p>

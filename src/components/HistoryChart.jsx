@@ -109,7 +109,7 @@ const HistoryChart = (props) => {
   };
 
   return (
-    <div style={{ width: "50%" }} className="coin-chart">
+    <div style={{ width: "50%" }} className="coin-charts">
       <Line options={options} data={data} />
     </div>
   );

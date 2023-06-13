@@ -63,7 +63,7 @@ const Cryptocurrencies = () => {
   }, []);
 
   return (
-    <div>
+    <div className="cryptocurrency-container">
       <h1 className="allcoins-title">Cryptocurrencies</h1>
       <div className="allcoins-container">
         {coins.map((coins) => {

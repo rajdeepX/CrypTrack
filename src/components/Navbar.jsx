@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src="" alt="" />
+        <img src="/logo.svg" alt="logo" />
         <Link to="/" className="title">
           CrypTrack
         </Link>
@@ -13,10 +13,14 @@ const Navbar = () => {
       <div className="nav-list">
         <ul className="list">
           <li className="list-item">
-            <Link to="/">Homepage</Link>
+            <NavLink activeClassName="active" to="/">
+              Homepage
+            </NavLink>
           </li>
           <li className="list-item">
-            <Link to="/cryptocurrencies">Cryptocurrencies</Link>
+            <NavLink activeClassName="active" to="/cryptocurrencies">
+              Cryptocurrencies
+            </NavLink>
           </li>
           {/* <li className="list-item">
             <Link to="/cryptoDetails">Crypto Details</Link>
